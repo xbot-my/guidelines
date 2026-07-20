@@ -1,0 +1,73 @@
+{
+    "name": "xbot-my/guidelines",
+    "description": "Guidelines for Laravel development purpose.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "laravel-boost",
+        "coding",
+        "guidelines"
+    ],
+    "authors": [
+        {
+            "name": "Roy Thia",
+            "email": "roy@xbot.my"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "illuminate/support": "^13.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^11.1",
+        "pestphp/pest": "^4.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "XBot\\Guidelines\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "XBot\\Guidelines\\Tests\\": "tests/",
+            "Workbench\\App\\": "workbench/app/",
+            "Workbench\\Database\\Factories\\": "workbench/database/factories/",
+            "Workbench\\Database\\Seeders\\": "workbench/database/seeders/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "XBot\\Guidelines\\GuidelinesServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-autoload-dump": [
+            "@clear",
+            "@prepare"
+        ],
+        "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
+        "prepare": "@php vendor/bin/testbench package:discover --ansi",
+        "build": "@php vendor/bin/testbench workbench:build --ansi",
+        "serve": [
+            "Composer\\Config::disableProcessTimeout",
+            "@build",
+            "@php vendor/bin/testbench serve --ansi"
+        ],
+        "test": [
+            "@clear",
+            "@php vendor/bin/pest"
+        ]
+    }
+}
