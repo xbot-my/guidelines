@@ -8,4 +8,12 @@ CLAUDE.md
 /.claude
 /.agents
 /.ai
+/.codex
+/.cursor
+/.factory
+/.grok
+/.junie
+/boost.json
+/opencode.json
+/.mcp.json
 skills-lock.json
