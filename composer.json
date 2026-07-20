@@ -20,6 +20,7 @@
         "illuminate/support": "^13.0"
     },
     "require-dev": {
+        "laravel/boost": "^2.4",
         "orchestra/testbench": "^11.1",
         "pestphp/pest": "^4.7"
     },
