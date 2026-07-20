@@ -19,6 +19,7 @@
 - [API Routing](#api-routing)
 - [Testing](#testing)
 - [Quick Reference](#quick-reference)
+- [Domain Naming Conventions](#domain-naming-conventions)
 
 ## Core Laravel Principle
 
@@ -385,6 +386,10 @@ Validator::extend('organisation_type', function ($attribute, $value) {
 - Avoid `else` statements when possible
 - Use string interpolation over concatenation
 - Always use curly braces for control structures
+
+## Domain Naming Conventions
+
+所有业务代码必须按**业务域**作为第一级子目录。详见 [domain-naming-conventions.md](./domain-naming-conventions.md)。
 
 ---
 
