@@ -21,6 +21,7 @@
     },
     "require-dev": {
         "laravel/boost": "^2.4",
+        "laravel/pint": "^1.18",
         "orchestra/testbench": "^11.1",
         "pestphp/pest": "^4.7"
     },

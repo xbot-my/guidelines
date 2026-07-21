@@ -103,3 +103,4 @@ class MyClass {
 ## References
 
 - `references/xbot-laravel-php-guidelines.md`
+- `references/domain-naming-conventions.md`
