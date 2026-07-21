@@ -16,7 +16,7 @@ test('all skill directories have a SKILL.md file', function () {
     foreach ($skillDirs as $dir) {
         $skillFile = $dir.'/SKILL.md';
         expect(file_exists($skillFile))
-            ->toBeTrue("Missing SKILL.md in ".basename($dir));
+            ->toBeTrue('Missing SKILL.md in '.basename($dir));
     }
 });
 
