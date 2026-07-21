@@ -12,7 +12,6 @@ use Laravel\Roster\Roster;
  * Boost's shouldRun() returns false in unit test environments,
  * so we test the discovery layer directly via its classes.
  */
-
 beforeEach(function () {
     $this->packageRoot = realpath(__DIR__.'/../../');
     $this->roster = Roster::scan($this->packageRoot);
